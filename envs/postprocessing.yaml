@@ -1,0 +1,19 @@
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+  - defaults
+
+dependencies:
+  - scikit-image=0.19.3
+  - matplotlib
+  - numpy=1.23.5
+  - pandas
+  - anndata
+  - scanpy
+  - plotnine
+  - statsmodels
+  - scipy
+  - pip
+  - pip:
+    - git+https://github.com/edbiomedai/scmorph.git

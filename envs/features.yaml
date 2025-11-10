@@ -1,0 +1,20 @@
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+  - defaults
+  
+dependencies:
+  - scikit-image=0.19.3
+  - matplotlib
+  - numpy=1.23.5
+  - pandas
+  - anndata
+  - numba
+  - pip
+  - cellprofiler
+  - cellprofiler-core
+  - centrosome
+  - pip:
+    - mahotas
+    - git+https://github.com/pydata/sparse.git

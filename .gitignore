@@ -1,0 +1,11 @@
+.nextflow*
+work
+sandbox
+reports
+.DS_Store
+*__pycache__
+output
+report*
+containers
+staging/
+.vscode

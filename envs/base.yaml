@@ -1,0 +1,15 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - scikit-image
+  - matplotlib
+  - numpy
+  - pandas
+  - anndata
+  - numba
+  - opencv
+  - pip
+  - pip:
+    - mahotas
+    - git+https://github.com/pydata/sparse.git
