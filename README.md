@@ -1,36 +1,23 @@
-Nextflow Pipeline to Extract Cells From BioImages
+cellextract: image-to-feature nextflow pipeline
 ================
 
-This is the repository for pipelines to extract morphological
-information from various types of bioimages made by the Khamseh and
-Beentjes labs from the University of Edinburgh.
+This pipeline processes microscopy images to single-cell feature matrices.
+It has found application in [our work](https://doi.org/10.1101/2025.11.14.687149) on phenotypes induced by microRNAs 
+and was developed primarily for high-content (Cell Painting) data in mind.
 
-This repository contains two workflows, <IMAGE_WORKFLOW_NAME> for
-extracting morphological information from traditional microscopy images
-and `workflow_wsi.nf` for extracting morphological information from
-whole slide images. Both of these workflows run a backbone of the same
-processes that can also be found in this repository, all of which can be
-customised by the user.
+**Features**
+- Segmentation with Cellpose-2S, which detects single- and multi-nucleated cells
+- Image QC feature extraction (thanks to hooks into CellProfiler)
+- CellProfiler-like feature extraction
 
 ## Running the Workflows
+1. Adapt the `example_nextflow.config` to your needs (see [below](#config))
+2. Run the pipeline `nexflow run` (possibly with `-profile` and `-c` options to point to your nextflow profiles and configs)
 
-TODO: Write instructions.
+For example, you may wish to use singularity/docker so you do not have to manage dependencies yourself. To do so, make sure you have singularity installed, then use `nextflow run -c singularity`.
 
-As we have 2 workflows in one project this will probably have to be git
-cloning instructions unless we do something clever.
+## Config
+Steps to adapt the config:
+1. Copy the config to one that nextflow will detect automatically: `cp example_nextflow.config nextflow.config`
+2. Edit it using your favorite text editor, e.g. `nano nextflow.config`
 
-## Workflow Overviews
-
-### <IMAGE_WORKFLOW_NAME>
-
-### `workflow_wsi.nf`
-
-This workflow is for processing whole slide images, which typically tend
-to be bigger than normal images and also contain more structural
-information. To this end, images within this pipeline are by default
-passed to algorithms that handle WSI’s in a more memory efficient
-manner.
-
-## Contact
-
-TODO: Decide on contact strategy (i.e. Issues vs. emails etc.)
