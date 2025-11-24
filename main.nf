@@ -38,14 +38,14 @@ params.batch_size = 10
 // Regular expression for decoding metadata from file names
 params.metadata_regex = "(?P<Plate>[A-Za-z0-9\\-\\s]*)_(?P<Well>[A-Z][0-9]{2})_s(?P<Site>[0-9])_w(?P<ChannelNumber>[0-9])"
 
-// Metadata column name containing treatments
+// Input file name endings, ".tif" or ".tiff"
+params.input_file_type = ".tif"
+
+// Metadata column name containing treatments (which is not enabled by default)
 params.treatment_key = "treatment"
 
 // Regular expression used in postprocessing (which is not enabled by default)
 params.sample_regex = "(?P<Replicate>R[0-9])-(?P<PlateLayout>P[0-9]{1,2})_(?P<CellLine>[A-za-z0-9\\-\\s]*)_(?P<TimePoint>[0-9\\-]*)_(?P<PlateID>[0-9]{5})_(?P<Well>[A-Z][0-9]{2})_(?P<Site>[0-9])"
-
-// Input file name endings, ".tif" or ".tiff"
-params.input_file_type = ".tif"
 
 // End parameters
 
